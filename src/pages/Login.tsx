@@ -50,7 +50,7 @@ export default function Login() {
       <div className="w-full max-w-md px-4 relative z-10">
         <form onSubmit={handleLogin} className="bg-zinc-950/70 backdrop-blur-xl rounded-2xl shadow-2xl border border-zinc-800 p-8 ring-1 ring-white/5">
           <div className="flex justify-center mb-6 text-amber-500"><ShieldAlert size={52}/></div>
-          <h1 className="text-2xl font-black text-white text-center tracking-widest uppercase mb-1">Vanguard Op-Center</h1>
+          <h1 className="text-2xl font-black text-white text-center tracking-widest uppercase mb-1">Garuda AEGIS</h1>
           <p className="text-zinc-400 text-center text-xs tracking-widest font-bold uppercase mb-8">Restricted Access. Authorized Personnel Only.</p>
 
           {error && <div className="bg-rose-900/30 border border-rose-500 text-rose-400 p-3 rounded-lg mb-4 text-sm text-center font-bold">{error}</div>}

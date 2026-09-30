@@ -27,7 +27,7 @@ export default function Dashboard() {
   useEffect(() => { fetchData(); }, []);
 
   if (loading) {
-    return <div className="flex items-center justify-center h-64 text-amber-500 font-mono animate-pulse tracking-widest uppercase">Initializing Vanguard Link...</div>;
+    return <div className="flex items-center justify-center h-64 text-amber-500 font-mono animate-pulse tracking-widest uppercase">Initializing Garuda AEGIS Link...</div>;
   }
   if (!stats) return <p className="text-rose-500 font-mono tracking-widest uppercase">FATAL: Uplink Severed.</p>;
 

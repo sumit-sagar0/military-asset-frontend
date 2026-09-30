@@ -29,8 +29,8 @@ export default function Navbar() {
           </div>
           <div>
             <div className="flex items-center gap-3">
-              <h1 className="text-2xl font-black text-white tracking-widest uppercase">VANGUARD</h1>
-              <span className="text-[10px] font-bold bg-rose-900/40 text-rose-400 px-2 py-0.5 rounded-sm border border-rose-800">OP-CENTER</span>
+              <h1 className="text-2xl font-black text-white tracking-widest uppercase">GARUDA AEGIS</h1>
+              <span className="text-[10px] font-bold bg-rose-900/40 text-rose-400 px-2 py-0.5 rounded-sm border border-rose-800">SYSTEM</span>
             </div>
             <p className="text-[10px] text-zinc-500 uppercase tracking-[0.2em] mt-0.5 font-semibold">Strategic Asset & Logistics Matrix</p>
           </div>
