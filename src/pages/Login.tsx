@@ -39,9 +39,17 @@ export default function Login() {
   ];
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-slate-900">
-      <div className="w-full max-w-md px-4">
-        <form onSubmit={handleLogin} className="bg-slate-800 rounded-2xl shadow-2xl border border-slate-700 p-8">
+    <div 
+      className="min-h-screen flex items-center justify-center bg-slate-900 relative"
+      style={{
+        backgroundImage: 'linear-gradient(rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.95)), url("https://images.unsplash.com/photo-1579912443834-87856cc4b85c?q=80&w=2070&auto=format&fit=crop")',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center'
+      }}
+    >
+      <div className="absolute inset-0 bg-green-900/10 pointer-events-none mix-blend-overlay"></div>
+      <div className="w-full max-w-md px-4 relative z-10">
+        <form onSubmit={handleLogin} className="bg-slate-900/60 backdrop-blur-xl rounded-2xl shadow-2xl border border-slate-700/50 p-8 ring-1 ring-white/10">
           <div className="flex justify-center mb-6 text-red-500"><ShieldAlert size={52}/></div>
           <h1 className="text-2xl font-bold text-white text-center tracking-widest uppercase mb-1">Military Asset DB</h1>
           <p className="text-slate-400 text-center text-sm mb-8">Restricted Access. Authorized Personnel Only.</p>
