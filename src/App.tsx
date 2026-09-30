@@ -9,7 +9,7 @@ import Assignments from './pages/Assignments';
 
 function Layout({ children }: { children: React.ReactNode }) {
   return (
-    <div className="flex flex-col min-h-screen bg-[#0F172A] text-slate-300 font-sans">
+    <div className="flex flex-col min-h-screen bg-zinc-950 text-zinc-300 font-sans">
       <Navbar />
       <main className="flex-1 p-6 max-w-[1600px] mx-auto w-full">{children}</main>
     </div>
