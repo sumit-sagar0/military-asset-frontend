@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { ShieldAlert, Loader2 } from 'lucide-react';
@@ -40,43 +39,43 @@ export default function Login() {
 
   return (
     <div 
-      className="min-h-screen flex items-center justify-center bg-slate-900 relative"
+      className="min-h-screen flex items-center justify-center bg-zinc-950 relative"
       style={{
-        backgroundImage: 'linear-gradient(rgba(15, 23, 42, 0.4), rgba(15, 23, 42, 0.7)), url("https://images.unsplash.com/photo-1579912443834-87856cc4b85c?q=80&w=2070&auto=format&fit=crop")',
+        backgroundImage: 'linear-gradient(rgba(9, 9, 11, 0.5), rgba(9, 9, 11, 0.8)), url("/bg.jpg")',
         backgroundSize: 'cover',
         backgroundPosition: 'center'
       }}
     >
-      <div className="absolute inset-0 bg-green-900/10 pointer-events-none mix-blend-overlay"></div>
+      <div className="absolute inset-0 bg-amber-900/10 pointer-events-none mix-blend-overlay"></div>
       <div className="w-full max-w-md px-4 relative z-10">
-        <form onSubmit={handleLogin} className="bg-slate-900/60 backdrop-blur-xl rounded-2xl shadow-2xl border border-slate-700/50 p-8 ring-1 ring-white/10">
-          <div className="flex justify-center mb-6 text-red-500"><ShieldAlert size={52}/></div>
-          <h1 className="text-2xl font-bold text-white text-center tracking-widest uppercase mb-1">Military Asset DB</h1>
-          <p className="text-slate-400 text-center text-sm mb-8">Restricted Access. Authorized Personnel Only.</p>
+        <form onSubmit={handleLogin} className="bg-zinc-950/70 backdrop-blur-xl rounded-2xl shadow-2xl border border-zinc-800 p-8 ring-1 ring-white/5">
+          <div className="flex justify-center mb-6 text-amber-500"><ShieldAlert size={52}/></div>
+          <h1 className="text-2xl font-black text-white text-center tracking-widest uppercase mb-1">Vanguard Op-Center</h1>
+          <p className="text-zinc-400 text-center text-xs tracking-widest font-bold uppercase mb-8">Restricted Access. Authorized Personnel Only.</p>
 
-          {error && <div className="bg-red-900/30 border border-red-500 text-red-400 p-3 rounded-lg mb-4 text-sm text-center">{error}</div>}
+          {error && <div className="bg-rose-900/30 border border-rose-500 text-rose-400 p-3 rounded-lg mb-4 text-sm text-center font-bold">{error}</div>}
 
           <div className="mb-4">
-            <label className="text-xs font-semibold text-slate-400 uppercase tracking-wider block mb-2">Auth Email</label>
+            <label className="text-[10px] font-black text-zinc-500 uppercase tracking-widest block mb-2">Auth Email</label>
             <input type="email" value={email} onChange={e => setEmail(e.target.value)}
-              className="w-full bg-slate-900 border border-slate-600 text-white rounded-lg px-4 py-3 focus:outline-none focus:border-red-500 transition-colors" required />
+              className="w-full bg-zinc-900 border border-zinc-800 text-white rounded-lg px-4 py-3 focus:outline-none focus:ring-1 focus:ring-amber-500 transition-colors" required />
           </div>
           <div className="mb-8">
-            <label className="text-xs font-semibold text-slate-400 uppercase tracking-wider block mb-2">Passcode</label>
+            <label className="text-[10px] font-black text-zinc-500 uppercase tracking-widest block mb-2">Passcode</label>
             <input type="password" value={password} onChange={e => setPassword(e.target.value)}
-              className="w-full bg-slate-900 border border-slate-600 text-white rounded-lg px-4 py-3 focus:outline-none focus:border-red-500 transition-colors" required />
+              className="w-full bg-zinc-900 border border-zinc-800 text-white rounded-lg px-4 py-3 focus:outline-none focus:ring-1 focus:ring-amber-500 transition-colors" required />
           </div>
           <button type="submit" disabled={loading}
-            className="w-full bg-red-600 hover:bg-red-700 disabled:opacity-70 text-white rounded-lg py-3 font-bold tracking-widest uppercase transition-colors flex items-center justify-center gap-2">
-            {loading ? <><Loader2 size={18} className="animate-spin"/> Verifying...</> : 'Secure Login'}
+            className="w-full bg-amber-500 hover:bg-amber-400 disabled:opacity-70 text-zinc-950 rounded-lg py-3 font-black tracking-widest uppercase transition-colors flex items-center justify-center gap-2 shadow-[0_0_15px_rgba(245,158,11,0.4)]">
+            {loading ? <><Loader2 size={18} className="animate-spin"/> Authenticating...</> : 'Secure Login'}
           </button>
 
-          <div className="mt-6 pt-4 border-t border-slate-700">
-            <p className="text-xs text-slate-400 font-semibold mb-2 text-center">Quick Fill Credentials</p>
+          <div className="mt-8 pt-6 border-t border-zinc-800">
+            <p className="text-[10px] text-zinc-500 uppercase tracking-widest font-black mb-3 text-center">Quick Fill Credentials</p>
             <div className="grid grid-cols-3 gap-2">
               {credentials.map(c => (
                 <button key={c.label} type="button" onClick={() => { setEmail(c.email); setPassword(c.password); }}
-                  className="text-xs bg-slate-700 hover:bg-slate-600 text-slate-300 rounded px-2 py-1.5 transition-colors">{c.label}</button>
+                  className="text-[10px] font-bold uppercase tracking-wider bg-zinc-800 hover:bg-zinc-700 text-zinc-300 rounded px-2 py-2 transition-colors border border-zinc-700">{c.label}</button>
               ))}
             </div>
           </div>
