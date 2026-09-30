@@ -50,8 +50,12 @@ export default function Navbar() {
                 }`
               }
             >
-              <item.icon size={16} strokeWidth={isActive ? 2.5 : 2} />
-              {item.label}
+              {({ isActive }) => (
+                <>
+                  <item.icon size={16} strokeWidth={isActive ? 2.5 : 2} />
+                  {item.label}
+                </>
+              )}
             </NavLink>
           ))}
         </div>
