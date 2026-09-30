@@ -42,7 +42,7 @@ export default function Login() {
     <div 
       className="min-h-screen flex items-center justify-center bg-slate-900 relative"
       style={{
-        backgroundImage: 'linear-gradient(rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.95)), url("https://images.unsplash.com/photo-1579912443834-87856cc4b85c?q=80&w=2070&auto=format&fit=crop")',
+        backgroundImage: 'linear-gradient(rgba(15, 23, 42, 0.4), rgba(15, 23, 42, 0.7)), url("https://images.unsplash.com/photo-1579912443834-87856cc4b85c?q=80&w=2070&auto=format&fit=crop")',
         backgroundSize: 'cover',
         backgroundPosition: 'center'
       }}
